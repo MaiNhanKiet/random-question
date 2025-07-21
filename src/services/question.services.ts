@@ -2,7 +2,7 @@ import databaseServices from './database.services'
 
 class QuestionServices {
   async getRandomQuestion() {
-    return databaseServices.questions.aggregate([{ $sample: { size: 3 } }]).toArray()
+    return databaseServices.questions.aggregate([{ $sample: { size: 10 } }]).toArray()
   }
 }
 
